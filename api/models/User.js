@@ -6,7 +6,25 @@
  */
 
 module.exports = {
-  attributes: {
-  }
-};
+    attributes: {
+        // The user's name
+        name: {
+            type: 'string',
+            required: true
+        },
 
+        email: {
+            type: 'String',
+            unique: true,
+            lowercase: true
+        },
+
+        password: {
+            type: 'String'
+        },
+
+        encryptedPassword: {
+            type: 'String'
+        }
+    }
+};
