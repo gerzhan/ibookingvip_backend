@@ -23,3 +23,7 @@
 > генерация кода для авторизации и авторизации пользователей (согласно [sails-generate-auth](https://github.com/kasperisager/sails-generate-auth))
 
     $sails generate auth
+
+> внесение исправление в `config/bootstrap.js` согласно [инструкции sails-generate-auth](https://github.com/kasperisager/sails-generate-auth#requirements)
+
+    sails.services.passport.loadStrategies();
