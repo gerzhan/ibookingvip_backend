@@ -10,7 +10,7 @@ module.exports = {
 
         // If not logged in, show the public view.
         if (!req.session.me) {
-            return res.view('homepage');
+            return res.view('page/homepage');
         }
 
         // Otherwise, look up the logged-in user and show the logged-in view,
@@ -34,5 +34,6 @@ module.exports = {
             });
 
         });
-    }
+    },
+}
 };
