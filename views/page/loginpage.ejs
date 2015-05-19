@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="login">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Login Page">
+    <meta name="keywords" content="loginpage">
+    <link rel="stylesheet" href="app/css/app.css" data-ng-if="!app.layout.isRTL">
+    <!-- <link rel="stylesheet" href="app/css/app-rtl.css" data-ng-if="app.layout.isRTL"> -->
+
+    <!-- custom style -->
+    <link rel="stylesheet" href="app/css/style.css" >
+    <title>Login</title>
+</head>
+
+<body>
+<div ui-view ng-controller="LoginFormController" class="block-center mt-xl wd-xl">
+  <!-- START panel-->
+  <div class="panel panel-dark panel-flat">
+      <div class="panel-heading text-center"><a href="#"><img src="app/img/logoDashboardMin.png" alt="Image" class="block-center img-rounded"/></a></div>
+    <div class="panel-body">
+      <p class="text-center pv">SIGN IN TO CONTINUE.</p>
+      <form role="form" ng-submit="login()" validate-form="" novalidate="" class="mb-lg" method="POST">
+        <div class="form-group has-feedback">
+          <input id="exampleInputEmail1" type="email" name="email" placeholder="Enter email" autocomplete="off" ng-model="account.email" required="required" class="form-control"/><span class="fa fa-envelope form-control-feedback text-muted"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <input id="exampleInputPassword1" type="password" name="password" placeholder="Password" ng-model="account.password" required="required" class="form-control"/><span class="fa fa-lock form-control-feedback text-muted"></span>
+        </div>
+        <div class="clearfix">
+          <div class="checkbox c-checkbox pull-left mt0">
+            <label>
+              <input type="checkbox" value="" name="remember" ng-model="account.remember"/><span class="fa fa-check"></span> Remember Me
+            </label>
+          </div>
+          <div class="pull-right"><a ui-sref="page.recover" class="text-muted">Forgot your password?</a></div>
+        </div>
+        <button type="submit" class="btn btn-block btn-primary mt-lg">Login</button>
+      </form>
+      <div ng-show="authMsg" class="alert alert-danger text-center">{{authMsg}}</div>
+      <p class="pt-lg text-center">Need to Signup?</p><a ui-sref="page.register" class="btn btn-block btn-default">Register Now</a>
+    </div>
+  </div>
+  <!-- END panel-->
+  <div class="p-lg text-center"><span>&copy; </span><span ng-bind="app.year"> </span><span> - </span><span ng-bind="app.name"></span><br/><span ng-bind="app.description"></span></div>
+</div>
+  <script src="app/js/base.js"></script>
+          <script src='bower_components/lodash/dist/lodash.min.js'></script>
+        <script src='bower_components/angular-google-maps/dist/angular-google-maps.js'></script>
+        <script src="vendor/angular-local-storage/angular-local-storage.js"></script>
+    <script src="app/js/app.js"></script>
+    <script>
+     var app = angular.module('login',['angle']).run(function($state){
+      $state.go('app.login')
+     }).config(['$locationProvider',function ($locationProvider) {
+       $locationProvider.html5Mode({
+  enabled: true,
+  requireBase: false
+});
+     }]);
+    </script>
+</body>
+
+</html>
