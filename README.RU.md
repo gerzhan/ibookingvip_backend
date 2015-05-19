@@ -27,3 +27,7 @@
 > внесение исправление в `config/bootstrap.js` согласно [инструкции sails-generate-auth](https://github.com/kasperisager/sails-generate-auth#requirements)
 
     sails.services.passport.loadStrategies();
+
+> внесение исправление в `config/policies.js` согласно [инструкции sails-generate-auth](https://github.com/kasperisager/sails-generate-auth#requirements)
+
+    '*': [ 'passport']
