@@ -44,3 +44,11 @@
     'get /auth/:provider': 'AuthController.provider',
     'get /auth/:provider/callback': 'AuthController.callback',
     'get /auth/:provider/:action': 'AuthController.callback',
+
+> создание и сохранение настроект в `config/passport.js` для локальной стратегии
+
+    local: {
+        strategy: require('passport-local').Strategy
+    },
+
+
