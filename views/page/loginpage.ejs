@@ -21,7 +21,7 @@
       <div class="panel-heading text-center"><a href="#"><img src="app/img/logoDashboardMin.png" alt="Image" class="block-center img-rounded"/></a></div>
     <div class="panel-body">
       <p class="text-center pv">SIGN IN TO CONTINUE.</p>
-      <form role="form" ng-submit="login()" validate-form="" novalidate="" class="mb-lg" method="POST">
+      <form role="form" ng-submit="login()" validate-form="" novalidate="" class="mb-lg" method="POST" action="/auth/local">
         <div class="form-group has-feedback">
           <input id="exampleInputEmail1" type="email" name="email" placeholder="Enter email" autocomplete="off" ng-model="account.email" required="required" class="form-control"/><span class="fa fa-envelope form-control-feedback text-muted"></span>
         </div>
@@ -45,21 +45,21 @@
   <!-- END panel-->
   <div class="p-lg text-center"><span>&copy; </span><span ng-bind="app.year"> </span><span> - </span><span ng-bind="app.name"></span><br/><span ng-bind="app.description"></span></div>
 </div>
-  <script src="app/js/base.js"></script>
-          <script src='bower_components/lodash/dist/lodash.min.js'></script>
-        <script src='bower_components/angular-google-maps/dist/angular-google-maps.js'></script>
-        <script src="vendor/angular-local-storage/angular-local-storage.js"></script>
-    <script src="app/js/app.js"></script>
-    <script>
-     var app = angular.module('login',['angle']).run(function($state){
-      $state.go('app.login')
-     }).config(['$locationProvider',function ($locationProvider) {
-       $locationProvider.html5Mode({
-  enabled: true,
-  requireBase: false
-});
-     }]);
-    </script>
+//   <script src="app/js/base.js"></script>
+//           <script src='bower_components/lodash/dist/lodash.min.js'></script>
+//         <script src='bower_components/angular-google-maps/dist/angular-google-maps.js'></script>
+//         <script src="vendor/angular-local-storage/angular-local-storage.js"></script>
+//     <script src="app/js/app.js"></script>
+//     <script>
+//      var app = angular.module('login',['angle']).run(function($state){
+//       $state.go('app.login')
+//      }).config(['$locationProvider',function ($locationProvider) {
+//        $locationProvider.html5Mode({
+//   enabled: true,
+//   requireBase: false
+// });
+//      }]);
+//     </script>
 </body>
 
 </html>
