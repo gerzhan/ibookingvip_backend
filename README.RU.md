@@ -19,3 +19,7 @@
 
     $npm i bcryptjs -S
     $npm i validator -S
+
+> генерация кода для авторизации и авторизации пользователей (согласно [sails-generate-auth](https://github.com/kasperisager/sails-generate-auth))
+
+    $sails generate auth

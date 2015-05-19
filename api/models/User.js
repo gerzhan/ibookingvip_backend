@@ -1,30 +1,12 @@
-/**
- * User.js
- *
- * @description :: TODO: You might write a short summary of how this model works and what it represents here.
- * @docs        :: http://sailsjs.org/#!documentation/models
- */
+var User = {
+  // Enforce model schema in the case of schemaless databases
+  schema: true,
 
-module.exports = {
-    attributes: {
-        // The user's name
-        name: {
-            type: 'string',
-            required: true
-        },
-
-        email: {
-            type: 'String',
-            unique: true,
-            lowercase: true
-        },
-
-        password: {
-            type: 'String'
-        },
-
-        encryptedPassword: {
-            type: 'String'
-        }
-    }
+  attributes: {
+    username  : { type: 'string', unique: true },
+    email     : { type: 'email',  unique: true },
+    passports : { collection: 'Passport', via: 'user' }
+  }
 };
+
+module.exports = User;
