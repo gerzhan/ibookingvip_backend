@@ -10,3 +10,12 @@
     $npm i passport-google -S
     $npm i passport-local -S
     $npm i passport-twitter -S
+
+> установка стандартного [sails-generate-auth](https://github.com/kasperisager/sails-generate-auth)
+
+    $npm i sails-generate-auth -D
+
+> установка дополнительных пакетов для [sails-generate-auth](https://github.com/kasperisager/sails-generate-auth)
+
+    $npm i bcryptjs -S
+    $npm i validator -S

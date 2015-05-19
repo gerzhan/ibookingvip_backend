@@ -5,6 +5,7 @@
     "description": "a Sails application",
     "keywords": [],
     "dependencies": {
+        "bcryptjs": "^2.1.0",
         "ejs": "~0.8.4",
         "grunt": "0.4.2",
         "grunt-contrib-clean": "~0.5.0",
@@ -29,7 +30,8 @@
         "rc": "~0.5.0",
         "sails": "~0.11.0",
         "sails-disk": "~0.10.0",
-        "sails-hook-autoreload": "^0.11.5"
+        "sails-hook-autoreload": "^0.11.5",
+        "validator": "^3.39.0"
     },
     "scripts": {
         "start": "node app.js",
@@ -41,5 +43,8 @@
         "url": "git://github.com/anonymous node/sails user/api_server_ibooking.git"
     },
     "author": "Nikolay Gerzhan <nikolay.gerzhan@gmail.com>",
-    "license": "MIT"
+    "license": "MIT",
+    "devDependencies": {
+        "sails-generate-auth": "^0.3.1"
+    }
 }
