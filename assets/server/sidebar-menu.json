@@ -1,0 +1,29 @@
+[
+  {
+    "text": "Dashboard",
+    "sref": "app.dashboard",
+    "submenu": [],
+    "translate": "sidebar.nav.DASHBOARD"
+  },
+  {
+    "text": "YOUR TRIP",
+    "sref": "app.service_type.your_trip",
+    "translate": "sidebar.nav.YOUR_TRIP"
+  },
+  {
+    "text": "WHAT ARE YOU LOOKING TO BOOK?",
+    "sref": "#"
+  },
+  {"text": "PRIVATE JET", "sref": "app.service_type.private_jet", "translate": "sidebar.nav.element.PRIVATE_JET" },
+  {"text": "HELICOPTER", "sref": "app.service_type.helicopter", "translate": "sidebar.nav.element.HELICOPTER" },
+  {"text": "AUTOMOBILE", "sref": "app.service_type.automobile", "translate": "sidebar.nav.element.AUTOMOBILE" },
+  {"text": "YACHT", "sref": "app.service_type.yacht", "translate": "sidebar.nav.element.YACHT" },
+  {"text": "THE PLACE", "sref": "app.service_type.the_place", "translate": "sidebar.nav.element.THE_PLACE" },
+  {"text": "VACATION TRIP", "sref": "app.service_type.vacation_trip", "translate": "sidebar.nav.element.VACATION_TRIP" },
+  {"text": "BANQUET HALL", "sref": "app.service_type.banquet_hall", "translate": "sidebar.nav.element.BANQUET_HALL" },
+  {"text": "JEWERLY & APPAREL", "sref": "app.service_type.jewerly_apparel", "translate": "sidebar.nav.element.JEWERLY_&_APPAREL" },
+
+  {"text": "CORPORATE PROFILE",  "sref": "app.account.corporate_profile", "translate": "sidebar.nav.element.CORPORATE_PROFILE" },
+  {"text": "GALLERY", "sref": "app.account.gallery", "translate": "sidebar.nav.element.GALLERY" },
+  {"text": "DEALS AND PROMOTIONS", "sref": "app.account.deals_promotions", "translate": "sidebar.nav.element.DEALS_AND_PROMOTIONS" }
+]

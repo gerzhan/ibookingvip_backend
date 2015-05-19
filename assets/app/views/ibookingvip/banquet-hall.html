@@ -1,0 +1,116 @@
+<div class="row">
+   <div class="col-lg-12">
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <div class="panel-title"></div>
+         </div>
+         <div class="panel-wrapper">
+            <div class="row">
+               <div class="col-lg-3">
+                  <div class="box-placeholder placeholder-custom"></div>
+               </div>
+               <div class="col-offset-lg-3 col-lg-6">
+                  <div class="row">
+                     <div class="col-lg-6">
+
+                     </div>
+                     <div class="col-lg-3">
+                        <label>Check in</label>
+                     </div>
+                     <div class="col-lg-3">
+                        <label>Check out</label>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <input type="text" ng-model="model.city" placeholder="City" typeahead="address for address in getCity($viewValue)" typeahead-loading="loadingLocations" class="form-control">
+                     </div>
+                     <div class="col-lg-3">
+                        <p class="input-group" ng-controller="DatepickerDemoCtrl">
+                           <span class="input-group-btn">
+                              <button type="button" ng-click="open($event)" class="btn btn-default">
+                                 <em class="fa fa-calendar"></em>
+                              </button>
+                           </span>
+                           <input ng-model="model.checkIn" type="text" datepicker-popup="{{format}}" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" class="form-control" masked="" data-inputmask="'mask': '99/99/9999'" />
+                        </p>
+                     </div>
+                     <div class="col-lg-3">
+                        <p class="input-group" ng-controller="DatepickerDemoCtrl">
+                           <span class="input-group-btn">
+                              <button type="button" ng-click="open($event)" class="btn btn-default">
+                                 <em class="fa fa-calendar"></em>
+                              </button>
+                           </span>
+                           <input ng-model="model.checkOut" type="text" datepicker-popup="{{format}}" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" class="form-control" masked="" data-inputmask="'mask': '99/99/9999'" />
+                        </p>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                     <div class="col-lg-4">
+                        <input type="text" ng-model="model.state" placeholder="State" typeahead="address for address in getState($viewValue)" typeahead-loading="loadingLocations" class="form-control">
+                     </div>
+                     <div class="col-lg-4">
+                        <input type="text" ng-model="model.country" placeholder="Country" typeahead="address for address in getCountry($viewValue)" typeahead-loading="loadingLocations" class="form-control">
+                     </div>
+                     <div class="col-lg-4">
+                        <div class="form-group">
+                           <select ng-model="model.capacity" class="form-control">
+                              <option selected value="50">50 people</option>
+                              <option value="100">100 people</option>
+                              <option value="150">150 people</option>
+                              <option value="200">200 people</option>
+                              <option value="300">300 people</option>
+                              <option value="500">500 people</option>
+                              <option value="1000">1000 people</option>
+                              <option value="5000">5000 people</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <div class="form-group">
+                           <select ng-model="model.music" class="form-control">
+                              <option selected value="enterainmentSoundSystem">Including Enterainment and sound system</option>
+                              <option value="soundSystem">Sound system only</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-lg-3">
+                        <div class="form-group">
+                           <select ng-model="model.parking" class="form-control">
+                              <option selected value="true">Parking</option>
+                              <option value="false">No Parking</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-lg-3">
+                        <div class="form-group">
+                           <select ng-model="model.priceRange" class="form-control">
+                              <option selected value="anyPriceRange">Any price range</option>
+                              <option value="lessThan1K">less than 1K</option>
+                              <option value="inRangeOh2k">in range of 2K</option>
+                              <option value="inRangeOh5k">in range of 5K</option>
+                              <option value="inRangeOh10k">in range of 10K</option>
+                              <option value="inRangeOh25k">in range of 25K</option>
+                              <option value="inRangeOh100k">in range of 100K</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                     <div class="col-lg-4 col-lg-offset-8">
+                        <button ng-click="sendInquiry()" type="button" class="btn btn-warning btn-square btn-lg" style="width:100%">SEND INQUIRY</button>
+                     </div>
+                  </div>
+                  <br>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

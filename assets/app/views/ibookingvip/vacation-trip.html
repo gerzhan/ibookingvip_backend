@@ -1,0 +1,129 @@
+<div class="row" ng-init="inquery={stars:'any',priceRange:'any',guests:1,rooms:1}">
+   <div class="col-lg-12">
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <div class="panel-title"></div>
+         </div>
+         <div class="panel-wrapper">
+            <div class="row">
+               <div class="col-lg-4">
+                  <div class="box-placeholder placeholder-custom"></div>
+               </div>
+               <div class="col-offset-lg-4 col-lg-7">
+                  <div class="row">
+                     <div class="col-lg-2">
+                        <label>Vacation type</label>
+                     </div>
+                     <div class="col-lg-10">
+                        <div class="row">
+                           <div class="col-lg-2">
+                              <label class="radio-inline">
+                                 <input type="radio" ng-model="model.vacationType" name="inlineRadioOptions" value="cruise">cruise
+                              </label>
+                           </div>
+                           <div class="col-lg-2">
+                              <label class="radio-inline">
+                                 <input type="radio" ng-model="model.vacationType" name="inlineRadioOptions" value="resourt">resourt
+                              </label>
+                           </div>
+                           <div class="col-lg-2">
+                              <label class="radio-inline">
+                                 <input type="radio" ng-model="model.vacationType" name="inlineRadioOptions" value="other">other
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                     <div class="col-lg-6">
+                     </div>
+                     <div class="col-lg-3">
+                        <label>Check in</label>
+                     </div>
+                     <div class="col-lg-3">
+                        <label>Check out</label>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <input ng-model="model.where" type="text" class="form-control" placeholder="Where">
+                     </div>
+                     <div class="col-lg-3" style="float:left">
+                        <p class="input-group" ng-controller="DatepickerDemoCtrl">
+                           <span class="input-group-btn">
+                              <button type="button" ng-click="open($event)" class="btn btn-default">
+                                 <em class="fa fa-calendar"></em>
+                              </button>
+                           </span>
+                           <input ng-model="model.checkIn" type="text" datepicker-popup="{{format}}" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" class="form-control" />
+                        </p>
+                     </div>
+                     <div class="col-lg-3" style="float:left">
+                        <p class="input-group" ng-controller="DatepickerDemoCtrl">
+                           <span class="input-group-btn">
+                              <button type="button" ng-click="open($event)" class="btn btn-default">
+                                 <em class="fa fa-calendar"></em>
+                              </button>
+                           </span>
+                           <input ng-model="model.checkOut" type="text" datepicker-popup="{{format}}" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" class="form-control" />
+                        </p>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                     <div class="col-lg-6 row">
+                        <div class="form-group col-lg-6">
+                           <!-- Count Rooms -->
+                           <select class="form-control" ng-model="model.rooms">
+                              <option value="1">1 room</option>
+                              <option value="2">2 rooms</option>
+                              <option value="3">3 rooms</option>
+                              <option value="4">4 rooms</option>
+                           </select>
+                        </div>
+                        <div class="form-group col-lg-6">
+                           <!-- Count Guests -->
+                           <select class="form-control" ng-model="model.guests">
+                              <option value="1">1 guest</option>
+                              <option value="2">2 guests</option>
+                              <option value="3">3 guests</option>
+                              <option value="4">4 guests</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-lg-6 row">
+                        <div class="form-group col-lg-6">
+                           <!-- Inquery Starts -->
+                           <select class="form-control" ng-model="model.stars">
+                              <option value="any">Any starts</option>
+                              <option value="2">2 stars & up</option>
+                              <option value="3">3 stars & up</option>
+                              <option value="4">4 stars & up</option>
+                              <option value="5">5 stars</option>
+                           </select>
+                           <!-- //Inquery Starts -->
+                        </div>
+                        <div class="form-group col-lg-6">
+                           <!-- Price Range -->
+                           <select class="form-control" ng-model="model.priceRange">
+                              <option selected value="any">Any price range</option>
+                              <option value="below1000">Below 1000</option>
+                              <option value="more1000">More than 1000</option>
+                           </select>
+                           <!-- //Price Range -->
+                        </div>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="col-lg-12">
+                     <button ng-click="sendInquiry()" type="button" class="btn btn-warning btn-square btn-lg  pull-right">SEND INQUIRY</button>
+                  </div>
+                  <br>
+               </div>
+            </div>
+         </div>
+         <br>
+      </div>
+   </div>
+</div>

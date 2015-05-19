@@ -1,0 +1,143 @@
+<div class="row">
+   <div class="col-lg-12">
+      <div class="panel panel-default">
+         <div class="panel-heading">
+            <div class="panel-title"></div>
+         </div>
+         <div class="panel-wrapper">
+            <div class="row">
+               <div class="col-lg-3">
+                  <!--<div class="box-placeholder placeholder-custom"></div> -->
+                  <img src="images/helicopter.png" style="width:100%">
+               </div>
+               <div class="col-offset-lg-3 col-lg-4">
+                  <div class="row">
+                     <div class="col-lg-4">
+                        <label class="radio-inline">
+                           <input type="radio" ng-model="model.pointCount" name="inlineRadioOptions" value="1">One way
+                        </label>
+                     </div>
+                     <div class="col-lg-4">
+                        <label class="radio-inline">
+                           <input type="radio" ng-model="model.pointCount" name="inlineRadioOptions" value="2">Round trip
+                        </label>
+                     </div>
+                     <div class="col-lg-4">
+                        <label class="radio-inline">
+                           <input type="radio" ng-model="model.pointCount" name="inlineRadioOptions" value="3">Multi-city
+                        </label>
+                     </div>
+                  </div>
+                  <br>
+                  <div ng-repeat="n in [] | range:model.pointCount track by $index" class="col-lg-12">
+                     <div class="row">
+                        <div class="col-lg-12">
+                           <form class="form-horizontal">
+                              <div class="form-group">
+                                 <label for="inputEmail3" class="col-lg-3 control-label">Departing</label>
+                                 <div class="col-lg-9">
+                                    <input type="text" ng-model="model.way[$index].departing" typeahead="address for address in getAirports($viewValue)" typeahead-loading="loadingLocations" class="form-control">
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-lg-12">
+                           <form class="form-horizontal">
+                              <div class="form-group">
+                                 <label for="inputEmail3" class="col-lg-3 control-label">Arriving</label>
+                                 <div class="col-lg-9">
+                                    <input type="text" ng-model="model.way[$index].arriving" typeahead="address for address in getAirports($viewValue)" typeahead-loading="loadingLocations" class="form-control">
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-lg-12">
+                           <form class="form-horizontal">
+                              <div class="form-group">
+                                 <label for="input-id-1" class="col-md-3 control-label">Date</label>
+                                 <div class="col-lg-6">
+                                    <p class="input-group" ng-controller="DatepickerDemoCtrl">
+                                       <span class="input-group-btn">
+                                          <button type="button" ng-click="open($event)" class="btn btn-default">
+                                             <em class="fa fa-calendar"></em>
+                                          </button>
+                                       </span>
+                                       <input ng-model="model.way[$index].date" type="text" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" class="form-control" masked="" data-inputmask="'mask': '99/99/9999'"
+                                       />
+                                    </p>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <form class="form-horizontal">
+                           <div class="form-group">
+                              <label for="inputEmail3" class="col-lg-3 control-label">Aircraft type</label>
+                              <div class="col-lg-9 input-group">
+                                 <span class="input-group-addon"><i class="glyphicon glyphicon-chevron-right"></i>
+                                 </span>
+                                 <select ng-model="model.aircraftType" class="form-control">
+                                    <option selected disabled>No preference</option>
+                                    <option value="Option 2">Option 2</option>
+                                    <option value="Option 3">Option 3</option>
+                                    <option value="Option 4">Option 4</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+               <!--
+                    <div class="col-lg-6 " ng-controller="RatingDemoCtrl">
+                        <div class="row">
+                            <div class="col-lg-10">
+                                <input ng-model="rate" type="range" min="0" max="14" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-10">
+                                <rating ng-model="rate" max="14" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" 
+                                    state-on="'fa fa-male fa-2x text-danger'" state-off="'fa fa-male fa-2x '"></rating>
+                            </div>
+                        </div>
+                    </div>-->
+               <div class="col-lg-4" ng-controller="RatingDemoCtrl">
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <span class="">Number of passengers : {{ model.passengersCount}}</span>
+                     </div>
+                     <div class="col-lg-6 text-right">
+                        <a ng-href="#"> More then 14 passengers? </a>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <input ng-model="model.passengersCount" type="range" min="1" max="14" />
+                        <br>
+                        <rating ng-model="model.passengersCount" max="14" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" state-on="'fa fa-male fa-2x text-dark'" state-off="'fa fa-male fa-2x '"></rating>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <!-- TODO set all row amd col weidth and height : 100% -->
+                     <div class="col-lg-12" style="margin-top:178px; margin-left:200px">
+                        <button ng-click="sendInquiry()" type="button" class="btn btn-warning btn-square btn-lg" style=" width: 50%;">SEND INQUIRY</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <br>
+         </div>
+      </div>
+   </div>
+</div>

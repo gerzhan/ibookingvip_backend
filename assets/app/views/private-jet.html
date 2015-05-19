@@ -1,0 +1,111 @@
+<div class="row" ng-controller="wsa_PrivateJetController">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title"></div>
+            </div>
+            <div class="panel-wrapper">
+               <div class="row">
+                        <div class="col-lg-3">
+                           <img src="app/img/provate-jet.jpg" style="width:100%">
+                        </div>
+                        <div class="col-offset-lg-3 col-lg-4" >
+                           <form class="form-horizontal ng-pristine ng-valid">
+                              <div class="form-group">
+                                 <label class="checkbox checkbox-inline">
+                                    <input id="inlineCheckbox1" ng-model="model.pointCount"  name="group" type="radio" value="1">One way</label>
+                                 <label class="checkbox-inline">
+                                    <input id="inlineCheckbox2" ng-model="model.pointCount" name="group" type="radio" value="2">Round trip</label>
+                                 <label class="checkbox-inline">
+                                    <input id="inlineCheckbox2" ng-model="model.pointCount" name="group" type="radio" value="3">Multi-city</label>
+                              </div>
+                              <div ng-repeat="n in [] | range:model.pointCount" class="col-lg-12">
+                                 <div class="form-group" >
+                                    <label for="input-id-1" class="col-md-3 control-label srf">Departing</label>
+                                    <div class="col-lg-8">
+                                       <!--<input id="input-id-1" type="text" class="form-control">-->
+                                       <input type="text" ng-model="model.departing"
+                                          typeahead="address for address in getAirports($viewValue)" typeahead-loading="loadingLocations" class="form-control">
+                                    </div>
+                                 </div>
+                                 <div class="form-group" >
+                                    <label for="input-id-1" class="col-md-3 control-label srf ">Arriving</label>
+                                    <div class="col-lg-8">
+                                       <input type="text" ng-model="model.arriving"
+                                          typeahead="address for address in getAirports($viewValue)" typeahead-loading="loadingLocations" class="form-control">
+                                    </div>
+                                 </div>
+                                 <div class="form-group">
+                                    <label for="input-id-1" class="col-md-3 control-label srf">Date</label>
+                                    <div class="col-lg-6">
+                                       <p class="input-group" ng-controller="DatepickerDemoCtrl">
+                                          <span class="input-group-btn">
+                                             <button type="button" ng-click="open($event)" class="btn btn-default">
+                                                <em class="fa fa-calendar"></em>
+                                             </button>
+                                          </span>
+                                          <input ng-model="model.date" type="text" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions"
+                                             ng-required="true" close-text="Close" class="form-control" masked="" data-inputmask="'mask': '99/99/9999'" />
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <div class="col-lg-12">
+                                    <label class="checkbox checkbox-inline">
+                                       <input ng-model="model.fuelStop" id="inlineCheckbox1" type="checkbox" value="option1">Exclude aircraft that require fuel stops</label>
+                                    <label class="checkbox-inline text-danger">
+                                       <input ng-model="model.onBoardService" id="inlineCheckbox2" type="checkbox" value="option2">No onboard Service</label>
+                                 </div>
+                              </div>
+                              <div class="form-group mb">
+                                 <label class="col-lg-3 control-label">Aircraft type</label>
+                                 <div class="col-lg-9">
+                                    <div class="input-group mb">
+                                       <span class="input-group-addon"></span>
+                                       <!-- this uses fixed width to avoid expand outside the group container-->
+                                       <select chosen="" ng-model="model.aircraftType" width="'300px'" class="chosen-select input-md">
+                                          <option value=""></option>
+                                          <option value="1">No preference</option>
+                                          <option value="2">Prop</option>
+                                          <option value="3">Light</option>
+                                          <option value="4">Mid</option>
+                                          <option value="5">Super-Mid</option>
+                                          <option value="6">Heavy</option>
+                                          <option value="6">Super-Heavy</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                        <div class="col-lg-4" ng-controller="RatingDemoCtrl">
+                           <div class="row">
+                              <div class="col-lg-6">
+                                 <span class="">Number of passengers : {{ model.passengersCount}} </span>
+                              </div>
+                              <div class="col-lg-6 text-right">
+                                 <a ng-href="#" > More then 14 passengers? </a>
+                              </div>
+                           </div>
+                           <br>
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <input ng-model="model.passengersCount" type="range" min="1" max="14"/><br>
+                                 <rating ng-model="model.passengersCount" max="14" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"
+                                 state-on="'fa fa-male fa-2x text-dark'" state-off="'fa fa-male fa-2x '"></rating>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <!-- TODO set all row amd col weidth and height : 100% -->
+                              <div class="col-lg-12" style="margin-top:178px; margin-left:200px">
+                                 <button ng-click="sendInquiry()" type="button" class="btn btn-warning btn-square btn-lg" style=" width: 50%;">SEND UNQUIRY</button>
+                              </div>
+                           </div>
+                        </div>
+               </div>
+               <br>
+            </div>
+        </div>
+    </div>
+</div>
