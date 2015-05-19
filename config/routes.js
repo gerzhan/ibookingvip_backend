@@ -21,29 +21,42 @@
  */
 
 module.exports.routes = {
+    // See https://github.com/balderdashy/sails/issues/2062
+    'OPTIONS /*': function(req, res) {
+        res.send(200);
+    },
 
-  /***************************************************************************
-  *                                                                          *
-  * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
-  * etc. depending on your default view engine) your home page.              *
-  *                                                                          *
-  * (Alternatively, remove this and add an `index.html` file in your         *
-  * `assets` directory)                                                      *
-  *                                                                          *
-  ***************************************************************************/
+    /***************************************************************************
+     *                                                                          *
+     * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
+     * etc. depending on your default view engine) your home page.              *
+     *                                                                          *
+     * (Alternatively, remove this and add an `index.html` file in your         *
+     * `assets` directory)                                                      *
+     *                                                                          *
+     ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
+    'get /': 'PageController.showHomePage',
+    //'get /': 'PageController.showLandingPage',
+    'get /dashboard': 'PageController.showDashboardPage',
+    /***************************************************************************
+     *                                                                          *
+     * Custom routes here...                                                    *
+     *                                                                          *
+     *  If a request to a URL doesn't match any of the custom routes above, it  *
+     * is matched against Sails route blueprints. See `config/blueprints.js`    *
+     * for configuration options and examples.                                  *
+     *                                                                          *
+     ***************************************************************************/
+    // @link https://github.com/kasperisager/sails-generate-auth#requirements
+    'get /login': 'AuthController.login',
+    'get /logout': 'AuthController.logout',
+    'get /register': 'AuthController.register',
 
-  /***************************************************************************
-  *                                                                          *
-  * Custom routes here...                                                    *
-  *                                                                          *
-  *  If a request to a URL doesn't match any of the custom routes above, it  *
-  * is matched against Sails route blueprints. See `config/blueprints.js`    *
-  * for configuration options and examples.                                  *
-  *                                                                          *
-  ***************************************************************************/
+    'post /auth/local': 'AuthController.callback',
+    'post /auth/local/:action': 'AuthController.callback',
 
+    'get /auth/:provider': 'AuthController.provider',
+    'get /auth/:provider/callback': 'AuthController.callback',
+    'get /auth/:provider/:action': 'AuthController.callback',
 };

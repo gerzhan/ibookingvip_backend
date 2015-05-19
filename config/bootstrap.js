@@ -11,7 +11,14 @@
 
 module.exports.bootstrap = function(cb) {
 
-  // It's very important to trigger this callback method when you are finished
-  // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
-  cb();
+    // It's very important to trigger this callback method when you are finished
+    // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
+    sails.services.passport.loadStrategies();
+
+    // This will catch all socket requests that are made and logs those to database.
+    sails.on('router:request', function(request) {
+        console.log(request);
+    });
+
+    cb();
 };

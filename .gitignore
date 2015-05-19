@@ -116,3 +116,8 @@ npm-debug.log
 nbproject
 .idea
 .node_history
+
+assets/vendor/
+assets/app/
+assets/app_modules/
+assets/server/
