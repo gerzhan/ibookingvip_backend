@@ -31,3 +31,16 @@
 > внесение исправление в `config/policies.js` согласно [инструкции sails-generate-auth](https://github.com/kasperisager/sails-generate-auth#requirements)
 
     '*': [ 'passport']
+
+> внесение исправление в `config/routes.js` согласно [инструкции sails-generate-auth](https://github.com/kasperisager/sails-generate-auth#requirements)
+
+    'get /login': 'AuthController.login',
+    'get /logout': 'AuthController.logout',
+    'get /register': 'AuthController.register',
+
+    'post /auth/local': 'AuthController.callback',
+    'post /auth/local/:action': 'AuthController.callback',
+
+    'get /auth/:provider': 'AuthController.provider',
+    'get /auth/:provider/callback': 'AuthController.callback',
+    'get /auth/:provider/:action': 'AuthController.callback',
