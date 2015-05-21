@@ -301,26 +301,33 @@
 
                 <div class="col-md-7">
                     <div class="form-optin p0">
-            <div class="row">
-              <div class="form-group col-md-6">
-                                <b>Name*</b>
-                <input  type="text" class="form-control" required placeholder="Enter name">
-              </div>
+                        <div class="row">
+                            <form id="contact-form" class="contact-form" method="post" action="/contact/send">
+                                          <div class="form-group col-md-6">
+                                                            <b>Name*</b>
+                                            <input  type="text" class="form-control" required placeholder="Enter name">
+                                          </div>
 
-              <div class="form-group col-md-6">
-                                <b>Email*</b>
-                <input  type="text" class="form-control" required placeholder="Enter e-mail">
-              </div>
-                            &nbsp; <br>
-              <div class="form-group col-md-12">
-                                <b>Message*</b>
-                                <textarea class="form-control" placeholder="Enter message"></textarea>
-              </div>
-                            &nbsp; <br>
-              <div class="form-group col-md-12">
-                <button type="submit" class="btn btn-default btn-submit">Send</button>
-              </div>
-            </div>
+                                          <div class="form-group col-md-6">
+                                                            <b>Email*</b>
+                                            <input  type="text" class="form-control" required placeholder="Enter e-mail">
+                                          </div>
+                                                        &nbsp; <br>
+                                          <div class="form-group col-md-12">
+                                                            <b>Message*</b>
+                                                            <textarea class="form-control" placeholder="Enter message"></textarea>
+                                          </div>
+                                                        &nbsp; <br>
+                                          <div class="form-group col-md-12">
+                                            <button type="submit" class="btn btn-default btn-submit">Send</button>
+                                          </div>
+                                          <div class="row">
+                                          <div class="col-md-12">
+                                            <div class="form-process-contact"></div>
+                                          </div>
+                                        </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
 
