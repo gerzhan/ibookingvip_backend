@@ -108,7 +108,6 @@
                     <div class="form-process" style="display:none">
                       <p><i class="fa fa-spinner fa-spin fa-2x"></i> Please Wait...</p>
                     </div><!-- Displays status when submitting form -->
-
                   </div>
                 </div>
             </div>
@@ -257,31 +256,36 @@
 
     <section class="bg-blue subscribe">
         <div class="container">
-
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <p>Subscribe to iBookingVIP Promotion Wire</p>
+  <form id="subscribe-form" class="contact-form" method="post" action="/subscribe/me">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>Subscribe to iBookingVIP Promotion Wire</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="form-optin">
-            <div class="row">
-              <div class="form-group col-md-4">
-                <input  type="text" class="form-control" required placeholder="Your Name">
-              </div>
-              <div class="form-group col-md-4">
-                <input  type="text" class="form-control" required placeholder="Your e-mail">
-              </div>
-<!--
-              <div class="form-group col-md-3">
-                <input  type="text" class="form-control" placeholder="Your Phone Number">
-              </div>
--->
-              <div class="form-group col-md-4">
-                <button type="submit" class="btn btn-default btn-submit">Subscribe now</button>
-              </div>
-            </div>
-            </div>
+                <div class="form-optin">
+                <div class="row">
+                  <div class="form-group col-md-4">
+                    <input  type="text" name="subscriber[username]"class="form-control" required placeholder="Your Name">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <input  type="email" name="subscriber[email]" class="form-control" required placeholder="Your e-mail">
+                  </div>
+    <!--
+                  <div class="form-group col-md-3">
+                    <input  type="text" class="form-control" placeholder="Your Phone Number">
+                  </div>
+    -->
+                  <div class="form-group col-md-4">
+                    <button type="submit" class="btn btn-default btn-submit">Subscribe now</button>
+                  </div>
+                </div>
+                </div>
+                <div class="row">
+                                          <div class="col-md-12">
+                                            <div class="form-process-subscribe"></div>
+                                          </div>
+            </form>
         </div>
     </section>
 
@@ -308,7 +312,7 @@
                             <form id="contact-form" class="contact-form" method="post" action="/contact/send">
                                           <div class="form-group col-md-6">
                                                             <b>Name*</b>
-                                            <input  type="text" class="form-control" required placeholder="Enter name">
+                                            <input  type="text" name="contact[username]"class="form-control" required placeholder="Enter name">
                                           </div>
 
                                           <div class="form-group col-md-6">

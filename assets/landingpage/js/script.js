@@ -83,7 +83,35 @@ $('#banner-form').on('submit', function(e) {
         })
 });
 
-
+// --------------------------------------------------------
+//  Subscribe Form
+// --------------------------------------------------------
+$('#subscribe-form').on('submit', function(e) {
+    e.preventDefault(); //Prevents default submit
+    var form = $(this);
+    var post_url = form.attr('action');
+    var post_data = form.serialize(); //Serialized the form data for process.php
+    $('.form-process-subscribe').show(); //html('<p><i class="fa fa-spinner fa-spin fa-2x"></i> Please Wait...</p>');
+    $('.form-optin').hide();
+    $.ajax({
+            type: 'POST',
+            url: post_url, //'contact/send', // Your form script
+            data: post_data
+        })
+        .done(function(msg) {
+            $(form).fadeOut(500, function() {
+                form.html(msg).fadeIn();
+            });
+        })
+        .fail(function(msg) {
+            $(form).fadeOut(500, function() {
+                form.fadeIn();
+            });
+        }).always(function() {
+            $('.form-process-subscribe').hide();
+            $('.form-optin').show();
+        })
+});
 // --------------------------------------------------------
 //  Contact Form
 // --------------------------------------------------------
