@@ -1,7 +1,7 @@
 angular.module('wsa.gallery', [])
 	.controller('wsa_GalleryController', ['$scope', 'wsa_GeolocationService', 'wsa_CurrentSessionService',
 		function($scope, wsa_GeolocationService, wsa_CurrentSessionService) {
-		
+
 			$scope.model ={};
 
 			$scope.$watch('model', function(){

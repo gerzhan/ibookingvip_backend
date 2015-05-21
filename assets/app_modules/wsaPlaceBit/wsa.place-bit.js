@@ -11,7 +11,7 @@ angular.module('wsa.placeBit', ['wsa.Common', 'ngDialog'])
 	    		}).then(function (value) {
 
 	    		}, function (reason) {
-	      			if(reason) { 
+	      			if(reason) {
 		      			if (navigator.geolocation) {
 					        navigator.geolocation.getCurrentPosition(function(position){
 			                	wsa_GeolocationService.setPosition(position.coords);
@@ -21,7 +21,7 @@ angular.module('wsa.placeBit', ['wsa.Common', 'ngDialog'])
 					    }
 					}
 	    		});
-			}	
+			}
 
 			$scope.onPlaceBit();
 	}])

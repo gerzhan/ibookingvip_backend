@@ -1,7 +1,7 @@
 angular.module('wsa.vacationTrip', [])
 	.controller('wsa_VacationTripController', ['$scope', 'wsa_GeolocationService', 'wsa_CurrentSessionService',
 		function($scope, wsa_GeolocationService, wsa_CurrentSessionService) {
-		
+
 			$scope.model ={};
 
 			var parseDate = function(data){
@@ -9,7 +9,7 @@ angular.module('wsa.vacationTrip', [])
 				return moment(unix).format("YYYY-MM-DD");
 			};
 
-			/* Запись свойств из currentSession в текущий $scope.model */
+			/* Р—Р°РїРёСЃСЊ СЃРІРѕР№СЃС‚РІ РёР· currentSession РІ С‚РµРєСѓС‰РёР№ $scope.model */
 			$scope.currentSession = wsa_CurrentSessionService.getCurrentSession();
 			angular.forEach($scope.currentSession, function(item, key){
 				$scope.model[key] = item;

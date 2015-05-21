@@ -29,7 +29,7 @@ angular.module('wsa.automobile', [])
 				dropOff : 'same'
 			};
 
-			/* Запись свойств из currentSession в текущий $scope.model */
+			/* Р—Р°РїРёСЃСЊ СЃРІРѕР№СЃС‚РІ РёР· currentSession РІ С‚РµРєСѓС‰РёР№ $scope.model */
 			$scope.currentSession = wsa_CurrentSessionService.getCurrentSession();
 			angular.forEach($scope.currentSession, function(item, key){
 				$scope.model[key] = item;
@@ -40,7 +40,7 @@ angular.module('wsa.automobile', [])
 			}, true);
 
 			$scope.sendInquiry = function() {
-				
+
 				$scope.model.dataStart.data = parseDate($scope.model.dataStart.data);
 				$scope.model.dataEnd.data = parseDate($scope.model.dataEnd.data);
 				console.log($scope.model);

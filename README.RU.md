@@ -65,3 +65,6 @@
     "Error.Passport.Password.Missing": "Oh no, you haven't set a password yet!",
     "Error.Passport.Generic": "Snap. Something went wrong with authorization."
 
+> добавление [machinepack-email](http://node-machine.org/machinepack-email)
+
+    $npm install machinepack-email --save

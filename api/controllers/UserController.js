@@ -6,4 +6,12 @@
  */
 
 module.exports = {
+    send: function(req, res) {
+        EmailService.sendEmail({
+            email: 'test@test.com',
+            name: 'test'
+        }).exec(function(err, msg) {
+            res.send("email send")
+        });
+    }
 };

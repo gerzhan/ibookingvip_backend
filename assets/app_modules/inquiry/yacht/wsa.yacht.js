@@ -1,7 +1,7 @@
 angular.module('wsa.yacht', [])
 	.controller('wsa_YachtController', ['$scope', 'wsa_GeolocationService', 'wsa_CurrentSessionService',
 		function($scope, wsa_GeolocationService, wsa_CurrentSessionService) {
-			
+
 			var parseDate = function(data){
 				var unix = new Date(data).getTime();
 				return moment(unix).format("YYYY-MM-DD");
@@ -37,7 +37,7 @@ angular.module('wsa.yacht', [])
 				dropOff : 'same'
 			};
 
-			/* Запись свойств из currentSession в текущий $scope.model */
+			/* Р—Р°РїРёСЃСЊ СЃРІРѕР№СЃС‚РІ РёР· currentSession РІ С‚РµРєСѓС‰РёР№ $scope.model */
 			$scope.currentSession = wsa_CurrentSessionService.getCurrentSession();
 			angular.forEach($scope.currentSession, function(item, key){
 				$scope.model[key] = item;
@@ -48,7 +48,7 @@ angular.module('wsa.yacht', [])
 			}, true);
 
 			$scope.sendInquiry = function() {
-				
+
 				$scope.model.dataStart.data = parseDate($scope.model.dataStart.data);
 				$scope.model.dataEnd.data = parseDate($scope.model.dataEnd.data);
 				console.log($scope.model);

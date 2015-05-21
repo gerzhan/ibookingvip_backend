@@ -33,7 +33,7 @@ angular.module('wsa.helicopter', [])
 			}, true);
 
 			$scope.sendInquiry = function() {
-				
+
 				angular.forEach($scope.model.way, function(item){
 					item.date = parseDate(item.date);
 				});

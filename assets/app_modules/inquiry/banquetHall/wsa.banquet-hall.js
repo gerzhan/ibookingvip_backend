@@ -1,7 +1,7 @@
 angular.module('wsa.banquetHall', [])
 	.controller('wsa_BanquetHallController', ['$scope', 'wsa_GeolocationService', 'wsa_CurrentSessionService',
 		function($scope, wsa_GeolocationService, wsa_CurrentSessionService) {
-		
+
 			$scope.model ={
 				capacity : '50',
 				music : 'enterainmentSoundSystem',
@@ -10,7 +10,7 @@ angular.module('wsa.banquetHall', [])
 
 			};
 
-			/* Запись свойств из currentSession в текущий $scope.model */
+			/* Р—Р°РїРёСЃСЊ СЃРІРѕР№СЃС‚РІ РёР· currentSession РІ С‚РµРєСѓС‰РёР№ $scope.model */
 			$scope.currentSession = wsa_CurrentSessionService.getCurrentSession();
 			angular.forEach($scope.currentSession, function(item, key){
 				$scope.model[key] = item;
@@ -60,7 +60,7 @@ angular.module('wsa.banquetHall', [])
 				$scope.model.checkOut = parseDate($scope.model.checkOut);
 				console.log($scope.model);
 				alert(JSON.stringify($scope.model));
-				
+
 			};
 
 			$scope.updateCurrentSession = function() {

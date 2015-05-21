@@ -1,7 +1,7 @@
 angular.module('wsa.corporateProfile', [])
 	.controller('wsa_CorporateProfileController', ['$scope', 'wsa_GeolocationService', 'wsa_CurrentSessionService',
 		function($scope, wsa_GeolocationService, wsa_CurrentSessionService) {
-		
+
 			$scope.model ={
 				social : {}
 
@@ -40,7 +40,7 @@ angular.module('wsa.corporateProfile', [])
 			      	return addresses;
 			    });
 			};
-			
+
 			$scope.saveData = function() {
 				console.log($scope.model);
 				alert(JSON.stringify($scope.model));

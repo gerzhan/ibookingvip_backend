@@ -4,6 +4,9 @@
  * This is merely meant as an example of how your Authentication controller
  * should look. It currently includes the minimum amount of functionality for
  * the basics of Passport.js to work.
+ * @see https://github.com/ProLoser/angular-sails-seed/blob/master/backend/api/controllers/AuthController.js
+ * @see https://github.com/tarlepp/angular-sailsjs-boilerplate
+ * @see https://gist.github.com/gerzhan/64a4558169b177b17730
  */
 var AuthController = {
     /**

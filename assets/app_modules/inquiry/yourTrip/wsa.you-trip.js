@@ -1,7 +1,7 @@
 angular.module('wsa.yourTrip', [])
 	.controller('wsa_YourTripController', ['$scope', 'wsa_GeolocationService', 'wsa_CurrentSessionService',
 		function($scope, wsa_GeolocationService, wsa_CurrentSessionService) {
-		
+
 			$scope.model ={};
 
 			$scope.$watch('model', function(){

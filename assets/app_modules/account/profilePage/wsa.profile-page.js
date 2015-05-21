@@ -1,7 +1,7 @@
 angular.module('wsa.profilePage', [])
 	.controller('wsa_ProfilePageController', ['$scope', 'wsa_GeolocationService', 'wsa_CurrentSessionService',
 		function($scope, wsa_GeolocationService, wsa_CurrentSessionService) {
-		
+
 			$scope.model ={
 				social : {},
 				keepHistory : {},
@@ -41,7 +41,7 @@ angular.module('wsa.profilePage', [])
 			      	return addresses;
 			    });
 			};
-			
+
 			$scope.saveData = function() {
 				console.log($scope.model);
 				alert(JSON.stringify($scope.model));
