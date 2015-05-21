@@ -61,23 +61,26 @@ $('#banner-form').on('submit', function(e) {
     var form = $(this);
     var post_url = form.attr('action');
     var post_data = form.serialize(); //Serialized the form data for process.php
-    $('.form-process-contact').html('<p><i class="fa fa-spinner fa-spin fa-2x"></i> Please Wait...</p>');
+    $('.form-process').show(); //html('<p><i class="fa fa-spinner fa-spin fa-2x"></i> Please Wait...</p>');
+    $('.form-optin').hide();
     $.ajax({
-        type: 'POST',
-        url: post_url, //'contact/send', // Your form script
-        data: post_data,
-        success: function(msg) {
+            type: 'POST',
+            url: post_url, //'contact/send', // Your form script
+            data: post_data
+        })
+        .done(function(msg) {
             $(form).fadeOut(500, function() {
                 form.html(msg).fadeIn();
             });
-        },
-        error: function(msg) {
+        })
+        .fail(function(msg) {
             $(form).fadeOut(500, function() {
                 form.fadeIn();
             });
-        }
-
-    })
+        }).always(function() {
+            $('.form-process').hide();
+            $('.form-optin').show();
+        })
 });
 
 

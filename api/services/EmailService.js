@@ -26,17 +26,23 @@ exports.sendEmail = function(options) {
             }
         }
     };
-    console.log(_config.templatesDir);
-    return Email.send(
-        _config
-    ).exec({
-        // An unexpected error occurred.
-        error: function(err) {
-            console.log(err);
-        },
-        // OK.
-        success: function() {
 
-        },
-    });
+    console.log(_config.templatesDir);
+    options.mail.templatesDir = path.resolve(__dirname, '..', '..', 'views', 'emailtemplates');
+    return Email.send({
+        service: 'Gmail',
+        auth: _config.auth,
+        mail: options.mail
+    })
+    // .exec({
+ //     // An unexpected error occurred.
+ //     error: function(err) {
+ //         console.log(err);
+ //     },
+ //     // OK.
+ //     success: function() {
+
+ //     },
+ // });
+
 }
