@@ -4,11 +4,11 @@ Author				: Simplesphere - Anoop Jeewoolall
 Theme Url 			: http://websites.simplesphere.net/sales/
 Description		: Sales - Multipurpose HTML5 Landing Page
 Website				: http://www.simplesphere.net
-========================================================================== */ 
+========================================================================== */
 
 /* ==========================================================================
 Basic Styling
-========================================================================== */ 
+========================================================================== */
 body { width: 100%; min-height: 100%; position: relative; font-family:"Raleway", Lucida Sans Unicode, Verdana, Helvetica, sans-serif; font-size: 14px; line-height: 24px; color: #575757; color: #999; font-weight: 400; letter-spacing: normal; -webkit-font-smoothing: antialiased!important; text-rendering: optimizeLegibility; font-weight: 500; color: #7a7a7a;}
 html { width: 100%; height: 100%;}
 
@@ -24,7 +24,7 @@ p { margin-bottom: 20px; line-height: 28px;}
 a, a:visited { -webkit-transition: all 150ms ease-in; -moz-transition: all 150ms ease-in; -o-transition: all 150ms ease-in; transition: all 150ms ease-in;}
 a { color: #00a8d6; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
 a:hover,
-a:focus { text-decoration: none; color: #007DA0; outline: none; } 
+a:focus { text-decoration: none; color: #007DA0; outline: none; }
 
 ul { margin: 0; padding: 0; list-style: none;}
 ul li {line-height: 28px;}
@@ -42,11 +42,11 @@ form {margin-bottom: 0;}
 
 /* ==========================================================================
 Classes
-========================================================================== */ 
+========================================================================== */
 .headline {text-align: center;}
 	.headline h1 {color: #31373a; padding-bottom: 15px; border-bottom: 2px solid #DDD; display: inline-block;}
 	.headline p {margin-bottom: 50px;}
-	
+
 .bg-dark .headline h1 {color: #FFF;}
 .bg-dark .headline p {color: #FFF;}
 
@@ -113,7 +113,7 @@ Classes
 
 /* ==========================================================================
 Color Customizations
-========================================================================== */ 
+========================================================================== */
 .bg-white {background-color: #FFF;}
 .bg-grey {background-color: #FAF7F8;}
 .bg-grey {background-color: #FAFAFA;}
@@ -139,7 +139,7 @@ Color Customizations
 
 /* ==========================================================================
 Carousel Settings
-========================================================================== */ 
+========================================================================== */
 .carousel-mod .carousel-indicators {position: static; display: block; width: auto; margin: 15px auto;}
 .carousel-mod .carousel-indicators li {background-color: #A3A3A3; border: none; margin:0;}
 .carousel-mod .carousel-indicators .active {background-color: #31373a; width: 10px; height: 10px;}
@@ -148,7 +148,7 @@ Carousel Settings
 
 /* ==========================================================================
  Navigation
-========================================================================== */ 
+========================================================================== */
 .navbar-inverse { margin-bottom: 0; -webkit-border-radius: 0; -moz-border-radius: 0;border-radius: 0; padding: 15px 0; -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out; -moz-transition: background .5s ease-in-out,padding .5s ease-in-out; transition: background .5s ease-in-out,padding .5s ease-in-out; background-color: transparent; background: none;  border: none;}
 .navbar-inverse .navbar-nav > li > a { color: #fff; display: block; -webkit-transition: all 100ms ease-in-out; -moz-transition: all 100ms ease-in-out; -o-transition: all 100ms ease-in-out; -ms-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; text-transform: capitalize; font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;}
 
@@ -163,11 +163,11 @@ Carousel Settings
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {background-color: transparent;}
 
 .navbar-brand { padding: 10px 15px;}
-.navbar-brand:hover { color: #fff;} 
+.navbar-brand:hover { color: #fff;}
 
 .scroll-fixed-navbar { padding: 10px 0; background-color: #FFF; -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1); box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);}
 .scroll-fixed-navbar .navbar-nav > li > a {color: #333;}
-.scroll-fixed-navbar .navbar-nav > li > a:hover, 
+.scroll-fixed-navbar .navbar-nav > li > a:hover,
 .scroll-fixed-navbar .navbar-nav > li.active > a,
 .scroll-fixed-navbar .navbar-nav > li.active > a:hover {color: #00a8d6; }
 
@@ -178,18 +178,18 @@ Carousel Settings
 
 /* ==========================================================================
 Logo
-========================================================================== */ 
+========================================================================== */
 .navbar-inverse .navbar-brand  {color: #FFF; font-size: 30px; font-weight: 700; padding: 15px;}
 .scroll-fixed-navbar.navbar-inverse .navbar-brand  {color: #1a1a1a; font-size: 30px; font-weight: 700; padding: 15px;}
 
 /* ==========================================================================
 Carousel
-========================================================================== */ 
+========================================================================== */
 .carousel-indicators {bottom: -17%;}
 
 /* ==========================================================================
 Intro Slider
-========================================================================== */ 
+========================================================================== */
 html, body {height: 100%;}
 
 #banner {background: #1A1A1A; position: relative; z-index: 1; }
@@ -200,19 +200,19 @@ html, body {height: 100%;}
 .header-text p {color: #E7E7E7;}
 
 .banner-inner { padding-top:115px; padding-bottom: 30px; background-image: url(../img/blur.png); -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; height:100%; position: relative; z-index: ;}
- 
+
 /* ==========================================================================
 Intro
-========================================================================== */ 
-.main-point {clear: both; padding-bottom: 35px; border-bottom:1px solid #F7F7F7; margin-bottom: 40px;} 
+========================================================================== */
+.main-point {clear: both; padding-bottom: 35px; border-bottom:1px solid #F7F7F7; margin-bottom: 40px;}
 .main-point p {margin-bottom: 0;}
 .main-point i { background-color: #00a8d6; width: 80px; height: 80px; border-radius: 5px; color: #FFF; line-height: 80px; text-align: center; font-size: 42px; display: inline-block; margin-right: 30px; float: left; margin-right: 20px;}
 .main-point h4 { margin-bottom: 10px; font-size: 20px; }
 .main-point-last {border: none; margin-bottom: 0;}
- 
+
 /* ==========================================================================
 Optin Forms
-========================================================================== */ 
+========================================================================== */
 
 .bg-blue .horizontal-optin button { background-color: #31373a;}
 .bg-blue .horizontal-optin button:hover { background-color: #00a8d6;}
@@ -247,7 +247,7 @@ Optin Forms
 
 /* ==========================================================================
  Features
-========================================================================== */ 
+========================================================================== */
 .feature-box {border: 1px solid #E5E5E5; background-color: #FFF; padding:20px;}
 .feature-box i {display:block; background-color: #00a8d6; width: 80px; height: 80px; border-radius: 5px; color: #FFF; line-height: 80px; text-align: center; font-size: 42px; margin: 20px auto; margin-top: -40px;}
 .feature-box h4 {text-align: center;  }
@@ -255,7 +255,7 @@ Optin Forms
 .feature {}
 .feature i {display:block; background-color: #0F141A; width: 80px; height: 80px; border-radius: 5px; color: #FFF; line-height: 80px; text-align: center; font-size: 42px; margin: 20px auto;}
 .feature h4 {text-align: center;}
- 
+
 .bubble {position: relative;border: 1px solid #E5E5E5; background-color: #FFF; padding:20px; margin-top: 30px; border-radius: 3px;}
 .bubble:after { content: ''; position: absolute; border-style: solid; border-width: 0 15px 15px; border-color: #FFFFFF transparent; display: block; width: 0; z-index: 1; margin-left: -15px; top: -15px; left: 50%;}
 .bubble:before { content: ''; position: absolute; border-style: solid; border-width: 0 15px 15px; border-color: #E5E5E5 transparent; display: block; width: 0; z-index: 0; margin-left: -15px; top: -16px; left: 50%;}
@@ -267,7 +267,7 @@ Optin Forms
 .last-row .features-list {border-bottom: 0; margin-bottom: 10px;}
 
 /* ==========================================================================
-Portfolio 
+Portfolio
  ========================================================================== */
 .hover-details {width: 100%; height: auto; overflow: hidden; position: relative; -moz-transition: all ease 400ms ease-in-out; -webkit-transition: all ease 400ms ease-in-out; -o-transition: all ease 400ms ease-in-out; transition: all ease 400ms ease-in-out; margin-bottom: 40px; }
 .hover-details .img-cover { width: 100%; height: 100%; opacity: 0; position: absolute; top: 0; left: 0; background: rgba(0, 168, 214, 0.8); -moz-transition: all ease 400ms ease-in-out; -webkit-transition: all ease 400ms ease-in-out; -o-transition: all ease 400ms ease-in-out; transition: all ease 400ms ease-in-out; border-radius:3px; }
@@ -299,7 +299,7 @@ Portfolio
 .nav-tabs {border: none; margin-bottom: 35px;}
 .nav-tabs > li > a { color: #596068; margin-right: 0px; background-color: #fff; border:0; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; padding: 20px 60px;}
 
-.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a,
 .nav-tabs > li.active > a:hover,
 .nav-tabs > li.active > a:focus {background: #00a8d6; color: #FFF; position: relative; border: none;}
 
@@ -319,7 +319,7 @@ Video Container
 
 /* ==========================================================================
 Team
- ========================================================================== */ 
+ ========================================================================== */
 .members-detail {text-align: center; background-color: #FFF; border-radius: 4px; padding-bottom: 30px; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; border: 1px solid #EFEFEF;}
 .members-detail:hover { -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1); box-shadow: 0 0 7px rgba(0, 0, 0, 0.1); cursor: pointer;}
 .members-detail h4 { display: inline-block; padding-bottom: 10px; border-bottom: 2px solid #DDD;}
@@ -330,7 +330,7 @@ Team
 
 /* ==========================================================================
 Testimonials
-========================================================================== */ 
+========================================================================== */
 .testimonial-inner {text-align: center;}
 .testimonial-inner img {margin-bottom: 15px; border-radius:4px; border:3px solid #FFF; -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1); -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.1); box-shadow: 0 0 7px rgba(0, 0, 0, 0.1);}
 .testimonial-inner p {display: block; position: relative; font-size: 16px;}
@@ -343,7 +343,7 @@ Pricing
 .pricing-container {padding-left: 0px; padding-right: 0px; }
 .price-column { background: #fff; margin-top:0; margin-bottom: 40px; -webkit-box-shadow: 0 0 7px rgba(0,0,0,0.1); box-shadow: 0 0 7px rgba(0,0,0,0.1); margin-top: 20px; -webkit-transition: all 0.25s ease-in-out;-moz-transition: all 0.25s ease-in-out;-o-transition: all 0.25s ease-in-out;transition: all 0.25s ease-in-out; position: relative; z-index: 1;}
 .price-column:hover {margin-top: -10px;-webkit-transition: all 0.25s ease-in-out;-moz-transition: all 0.25s ease-in-out;-o-transition: all 0.25s ease-in-out;transition: all 0.25s ease-in-out; -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.2);}
-.price-column h2 { background-color: #000; color: #FFF; font-size: 17px; text-align: center; margin-bottom: 0; padding: 30px 0;  } 
+.price-column h2 { background-color: #000; color: #FFF; font-size: 17px; text-align: center; margin-bottom: 0; padding: 30px 0;  }
 .price-column h3 { color: #fff; text-align: center; font-size: 32px; background: #0F141A; margin-bottom: 0; padding: 30px 0; font-weight: bold;}
 .price-column h3 span { font-weight: 300; font-size: 18px; }
 .price-column h3 sup {font-size: 18px;}
@@ -359,7 +359,7 @@ Pricing
 .price-btn:hover {background: #FFF; color: #1A9FF9; border: 2px solid #FFF;}
 
 .price-column p {padding: 20px; background: #F8F8F8;}
-	
+
 .price-column.large {margin-top: -20px;position: relative; z-index:2; -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.2); box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.2);  }
 .price-column.large h2 { background-color: #1166A0;}
 .price-column.large h3 { background: #1A9FF9; padding: 45px 0; font-size: 38px;}
@@ -380,7 +380,7 @@ Pricing
 
 /* ==========================================================================
 Buttons
-========================================================================== */ 
+========================================================================== */
 .btn-bluebg {padding: 15px 35px; border-radius: 0; border: 2px solid  color: #FFF; background-color: #1A9FF9; border-color: #1A9FF9; font-size: 14px; font-weight: bold; margin-right: 20px;}
 .btn-bluenobg {padding: 15px 35px; border-radius: 0; border: 2px solid rgba(0,0,0,0.2); color: #1A9FF9; background-color: #FFF; font-size: 14px; font-weight: bold;}
 
@@ -390,7 +390,7 @@ Buttons
 Partners
  ========================================================================== */
  .partners-logo img {width:100%;}
- 
+
 /* ==========================================================================
 Footer
  ========================================================================== */
@@ -414,7 +414,7 @@ Footer
 
 /* ==========================================================================
 Contact
-========================================================================== */ 
+========================================================================== */
 .contact-form input[type="text"], .contact-form textarea { color: #FFF; border: none; outline: none; width: 100%; display: block; margin-bottom: 15px; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; border-radius: 0; height: auto; background: #111; font-size: 13px; padding:10px 15px;}
 .contact-form textarea { min-height: 200px;}
 .contact-form button { text-align: center; color: #fff; padding: 10px 15px; background: transparent; border: 2px solid #FFF; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; font-weight: bold; border-radius: 0;}
@@ -446,7 +446,7 @@ Scroll To Top
  ========================================================================== */
 a.scroll-up { display: none; position: fixed; right: 10px; bottom: 10px; padding:5px 10px; background: #00a8d6; text-align: center; -moz-transition: -moz-transform 0.8s ease-in-out; -o-transition: -o-transform 0.8s ease-in-out; -webkit-transition: -webkit-transform 0.8s ease-in-out; transition: transform 0.8s ease-in-out; -webkit-backface-visibility: hidden;}
 a.scroll-up i {color: #FFF;}
-a.scroll-up:hover, 
+a.scroll-up:hover,
 a.scroll-up:focus { -moz-transform: scale(1.1, 1.1); -ms-transform: scale(1.1, 1.1); -webkit-transform: scale(1.1, 1.1); transform: scale(1.1, 1.1); background: #31373a;}
 
 
@@ -497,22 +497,22 @@ a.scroll-up:focus { -moz-transform: scale(1.1, 1.1); -ms-transform: scale(1.1, 1
 	.navbar-inverse .navbar-nav > li > a {color: #1a1a1a;}
 	.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus { color: #00A8D6;}
 	.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus  { color: #00A8D6;}
-	
+
 	.menu-right {float: none;}
-	
+
 	body {font-size: 13px;}
 	p {font-size: 13px;}
 	h4 {font-size: 16px; line-height: 25px;}
 	hr { margin: 15px 0;}
 	img {float: none; display: block; margin: 20px auto;}
 	iframe {max-height: 200px;}
-	
+
 	.headline h1 {font-size: 30px;}
 	.section {padding: 50px 0;}
-	
+
 	input[type="text"], textarea {margin-bottom: 15px;}
 	.bubble {margin-bottom: 30px;}
-	
+
 	.nav-tabs > li, .nav-pills > li { margin:0; display: block;}
 	.nav-tabs > li.active:after { border-width: 0;}
 	.nav-tabs > li.active:before {border-width: 0;}
@@ -520,7 +520,7 @@ a.scroll-up:focus { -moz-transform: scale(1.1, 1.1); -ms-transform: scale(1.1, 1
 	.price-column:hover {margin-top:0;}
 
 	.main-point {margin-bottom: 20px; border: none; float: none; width: 100%; border-bottom:1px solid #EFEFEF;}
-	
+
 	.members-holder{width:80%; float: none; margin:20px auto;}
 	.video-container {margin-bottom: 40px;}
 	.img-cover h3 {display: none;}

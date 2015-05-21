@@ -1,13 +1,13 @@
 // --------------------------------------------------------
 // Pretty Photo for Lightbox Image
-// -------------------------------------------------------- 
-$(document).ready(function() {	
-    $("a[data-gal^='prettyPhoto']").prettyPhoto(); 
+// --------------------------------------------------------
+$(document).ready(function() {
+    $("a[data-gal^='prettyPhoto']").prettyPhoto();
 });
 
 // --------------------------------------------------------
 //	Scroll Up
-// -------------------------------------------------------- 	
+// --------------------------------------------------------
 $(window).scroll(function() {
 	if ($(this).scrollTop() > 100) {
 		$('.scroll-up').fadeIn();
@@ -25,12 +25,12 @@ $('.scroll-up').click(function() {
 
 // --------------------------------------------------------
 //	Navigation Bar
-// -------------------------------------------------------- 	
-$(window).scroll(function(){	
-	"use strict";	
+// --------------------------------------------------------
+$(window).scroll(function(){
+	"use strict";
 	var scroll = $(window).scrollTop();
-	if( scroll > 60 ){		
-		$(".navbar").addClass("scroll-fixed-navbar");				
+	if( scroll > 60 ){
+		$(".navbar").addClass("scroll-fixed-navbar");
 	} else {
 		$(".navbar").removeClass("scroll-fixed-navbar");
 	}
@@ -38,7 +38,7 @@ $(window).scroll(function(){
 
 // --------------------------------------------------------
 //	Smooth Scrolling
-// -------------------------------------------------------- 	
+// --------------------------------------------------------
 $(".navbar-nav li a[href^='#']").on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({
@@ -48,7 +48,7 @@ $(".navbar-nav li a[href^='#']").on('click', function(e) {
 
 // --------------------------------------------------------
 //	Accordion (FAQ)
-// -------------------------------------------------------- 
+// --------------------------------------------------------
 function toggleIcon(e) {
 	$(e.target)
 		.prev('.panel-heading')
@@ -62,7 +62,7 @@ $('.panel').on('shown.bs.collapse', toggleIcon);
 
 // --------------------------------------------------------
 //	Banner Form
-// -------------------------------------------------------- 
+// --------------------------------------------------------
 $('#banner-form').on('submit', function(e) {
     e.preventDefault(); //Prevents default submit
     var form = $(this);
@@ -83,7 +83,7 @@ $('#banner-form').on('submit', function(e) {
 
 // --------------------------------------------------------
 //	Middle Form
-// -------------------------------------------------------- 
+// --------------------------------------------------------
 $('#middle-form').on('submit', function(e) {
     e.preventDefault(); //Prevents default submit
     var form = $(this);
@@ -104,7 +104,7 @@ $('#middle-form').on('submit', function(e) {
 
 // --------------------------------------------------------
 //	Contact Form
-// -------------------------------------------------------- 
+// --------------------------------------------------------
 $('#contact-form').on('submit', function(e) {
     e.preventDefault(); //Prevents default submit
     var form = $(this);
