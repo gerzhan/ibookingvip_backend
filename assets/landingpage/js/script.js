@@ -53,6 +53,32 @@ $('.scroll-up').click(function() {
     alert('');
     return false;
 });
+// --------------------------------------------------------
+//  Free registration Form
+// --------------------------------------------------------
+$('#banner-form').on('submit', function(e) {
+    e.preventDefault(); //Prevents default submit
+    var form = $(this);
+    var post_url = form.attr('action');
+    var post_data = form.serialize(); //Serialized the form data for process.php
+    $('.form-process-contact').html('<p><i class="fa fa-spinner fa-spin fa-2x"></i> Please Wait...</p>');
+    $.ajax({
+        type: 'POST',
+        url: post_url, //'contact/send', // Your form script
+        data: post_data,
+        success: function(msg) {
+            $(form).fadeOut(500, function() {
+                form.html(msg).fadeIn();
+            });
+        },
+        error: function(msg) {
+            $(form).fadeOut(500, function() {
+                form.fadeIn();
+            });
+        }
+
+    })
+});
 
 
 // --------------------------------------------------------
@@ -66,7 +92,7 @@ $('#contact-form').on('submit', function(e) {
     $('.form-process-contact').html('<p><i class="fa fa-spinner fa-spin fa-2x"></i> Please Wait...</p>');
     $.ajax({
         type: 'POST',
-        url: 'contact/send', // Your form script
+        url: post_url, //'contact/send', // Your form script
         data: post_data,
         success: function(msg) {
             $(form).fadeOut(500, function() {
