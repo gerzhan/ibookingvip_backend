@@ -1,8 +1,8 @@
 angular.module('wsa.jewerlyApparel', [])
 	.controller('wsa_JewerlyApparelController', ['$scope', 'wsa_GeolocationService', 'wsa_CurrentSessionService',
 		function($scope, wsa_GeolocationService, wsa_CurrentSessionService) {
-		
-			
+
+
 
 			$scope.getCity = function(val) {
 				return wsa_GeolocationService.city(val).then(function(res){
@@ -33,7 +33,7 @@ angular.module('wsa.jewerlyApparel', [])
 			      	return addresses;
 			    });
 			};
-			
+
 			var parseDate = function(data){
 				var unix = new Date(data).getTime();
 				return moment(unix).format("YYYY-MM-DD");
@@ -48,7 +48,7 @@ angular.module('wsa.jewerlyApparel', [])
 				}
 			};
 
-			/* Запись свойств из currentSession в текущий $scope.model */
+			/* Р—Р°РїРёСЃСЊ СЃРІРѕР№СЃС‚РІ РёР· currentSession РІ С‚РµРєСѓС‰РёР№ $scope.model */
 			$scope.currentSession = wsa_CurrentSessionService.getCurrentSession();
 			angular.forEach($scope.currentSession, function(item, key){
 				$scope.model[key] = item;
@@ -59,7 +59,7 @@ angular.module('wsa.jewerlyApparel', [])
 			}, true);
 
 			$scope.sendInquiry = function() {
-				
+
 				$scope.model.dataStart.data = parseDate($scope.model.dataStart.data);
 				$scope.model.dataEnd.data = parseDate($scope.model.dataEnd.data);
 				console.log($scope.model);

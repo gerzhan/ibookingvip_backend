@@ -1,15 +1,15 @@
 angular.module('wsa.Common', [])
-	.run(function(){	
+	.run(function(){
 	})
 	.service('wsa_GeolocationService', ['$resource', '$http', '$q', '$timeout', function($resource, $http, $q, $timeout){
 
 		var _position = {};
 		var _destination = {};
 
-		//https://developers.google.com/maps/documentation/geocoding/?csw=1#Geocoding доки геокодирование
-		var _resource =  $resource('//maps.googleapis.com/maps/api/geocode/json', {}, 
-		{ 
-        	airport: { 
+		//https://developers.google.com/maps/documentation/geocoding/?csw=1#Geocoding РґРѕРєРё РіРµРѕРєРѕРґРёСЂРѕРІР°РЅРёРµ
+		var _resource =  $resource('//maps.googleapis.com/maps/api/geocode/json', {},
+		{
+        	airport: {
         		method: 'GET',
         	},
         	city: {
@@ -25,7 +25,7 @@ angular.module('wsa.Common', [])
 
 
 		return {
- 
+
 			getPosition : function() {
 				return _position;
 			},
@@ -39,7 +39,7 @@ angular.module('wsa.Common', [])
 			},
 
 			setDestination : function( newDestination) {
-				_destination = newDestination; 
+				_destination = newDestination;
 			},
 
 			airport : function(val){
@@ -57,7 +57,7 @@ angular.module('wsa.Common', [])
 			    return resourse;
 			},
 
-			//https://gist.github.com/danasilver/6024009 метод фильтрации данных  по типу 
+			//https://gist.github.com/danasilver/6024009 РјРµС‚РѕРґ С„РёР»СЊС‚СЂР°С†РёРё РґР°РЅРЅС‹С…  РїРѕ С‚РёРїСѓ
 			city : function(val){
 			    var resourse = _resource.get({
 			        	address: val,
@@ -103,7 +103,7 @@ angular.module('wsa.Common', [])
 		var markers = [];
 
 		return {
- 
+
 			getMarkers : function() {
 				return markers;
 			},
@@ -127,8 +127,8 @@ angular.module('wsa.Common', [])
 				return _currentSession;
 			}
 		}
-		
+
 	}])
 	.service('wsa_InquiryService', [function(){
-	/* Сервис для валидации и отправки данных на сервер */
+	/* РЎРµСЂРІРёСЃ РґР»СЏ РІР°Р»РёРґР°С†РёРё Рё РѕС‚РїСЂР°РІРєРё РґР°РЅРЅС‹С… РЅР° СЃРµСЂРІРµСЂ */
 	}])

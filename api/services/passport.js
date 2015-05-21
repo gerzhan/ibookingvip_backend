@@ -6,7 +6,7 @@ var path     = require('path')
  * Passport Service
  *
  * A painless Passport.js service for your Sails app that is guaranteed to
- * Rock Your Socks™. It takes all the hassle out of setting up Passport.js by
+ * Rock Your Socksв„ў. It takes all the hassle out of setting up Passport.js by
  * encapsulating all the boring stuff in two functions:
  *
  *   passport.endpoint()
@@ -21,7 +21,7 @@ var path     = require('path')
  * Behind the scenes, the service stores all the data it needs within "Pass-
  * ports". These contain all the information required to associate a local user
  * with a profile from a third-party provider. This even holds true for the good
- * ol' password authentication scheme – the Authentication Service takes care of
+ * ol' password authentication scheme вЂ“ the Authentication Service takes care of
  * encrypting passwords and storing them in Passports, allowing you to keep your
  * User model free of bloat.
  */

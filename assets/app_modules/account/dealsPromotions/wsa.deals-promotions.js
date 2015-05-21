@@ -1,7 +1,7 @@
 angular.module('wsa.dealsPromotions', [])
 	.controller('wsa_DealsPromotionsController', ['$scope', 'wsa_GeolocationService', 'wsa_CurrentSessionService',
 		function($scope, wsa_GeolocationService, wsa_CurrentSessionService) {
-		
+
 			$scope.model ={};
 
 			var parseDate = function(data){
@@ -13,9 +13,9 @@ angular.module('wsa.dealsPromotions', [])
 				$scope.updateCurrentSession($scope.model);
 			}, true);
 
-			
+
 			$scope.saveData = function() {
-				if( $scope.model.dataStart.data && $scope.model.dataEnd.data) { 
+				if( $scope.model.dataStart.data && $scope.model.dataEnd.data) {
 					$scope.model.dataStart.data = parseDate($scope.model.dataStart.data);
 					$scope.model.dataEnd.data = parseDate($scope.model.dataEnd.data);
 				}

@@ -10,7 +10,8 @@ module.exports = {
 
         // If not logged in, show the public view.
         if (!req.user) {
-            return res.view('page/homepage');
+            // return res.view('page/homepage');
+            return res.view('page/landingpage');
         }
 
         // Otherwise, look up the logged-in user and show the logged-in view,
